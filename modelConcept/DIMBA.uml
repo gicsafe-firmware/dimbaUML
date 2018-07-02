@@ -647,7 +647,8 @@
                 </transition>
                 <transition xmi:type="uml:Transition" xmi:id="_Q5bCgFmLEeiFFviyqWdp8w" source="_4UfoIFiuEeiQLo5rqCRH8w" target="_ltE00GYGEeiSsKUmuCYmrw">
                   <trigger xmi:type="uml:Trigger" xmi:id="_SafzsFmLEeiFFviyqWdp8w" name="evNoResponse" event="_9rJ44FiwEeiQLo5rqCRH8w"/>
-                  <trigger xmi:type="uml:Trigger" xmi:id="_JF3NMG6gEei7quLLBC1gQg" event="_W1lmUGW9EeivSvTH1LqtnQ"/>
+                  <trigger xmi:type="uml:Trigger" xmi:id="_JF3NMG6gEei7quLLBC1gQg" name="evClosed" event="_W1lmUGW9EeivSvTH1LqtnQ"/>
+                  <trigger xmi:type="uml:Trigger" xmi:id="_RV2hoH3vEeihPLcquCoF6w" event="_DXAPYFz5EeildqcvJZY8yg"/>
                 </transition>
                 <transition xmi:type="uml:Transition" xmi:id="_Rs2LQGYHEeiSsKUmuCYmrw" guard="_OhpTMGYKEeiSsKUmuCYmrw" source="_ltE00GYGEeiSsKUmuCYmrw" target="_LcAXkFmLEeiFFviyqWdp8w">
                   <ownedRule xmi:type="uml:Constraint" xmi:id="_OhpTMGYKEeiSsKUmuCYmrw">
@@ -684,6 +685,11 @@
                 </transition>
                 <transition xmi:type="uml:Transition" xmi:id="_3gVsgHrKEeiMrZGutTFX3Q" source="_am3Q4G7DEeizZc1aGKRLzQ" target="_6a4F0FiuEeiQLo5rqCRH8w">
                   <trigger xmi:type="uml:Trigger" xmi:id="_6669AHrKEeiMrZGutTFX3Q" event="_9rJ44FiwEeiQLo5rqCRH8w"/>
+                </transition>
+                <transition xmi:type="uml:Transition" xmi:id="_IQEMYH3wEeihPLcquCoF6w" source="_4UfoIFiuEeiQLo5rqCRH8w" target="_6a4F0FiuEeiQLo5rqCRH8w">
+                  <trigger xmi:type="uml:Trigger" xmi:id="_OgDjwH3wEeihPLcquCoF6w" name="evIPStart" event="_R8vWIFmKEeiFFviyqWdp8w"/>
+                  <trigger xmi:type="uml:Trigger" xmi:id="_Ps5KUH3wEeihPLcquCoF6w" name="evIPGprsAct" event="_0RVLwFq-EeiA69UjQR0RyA"/>
+                  <trigger xmi:type="uml:Trigger" xmi:id="_Q-XZQH3wEeihPLcquCoF6w" name="evIPInitial" event="_oe9w8Fq-EeiA69UjQR0RyA"/>
                 </transition>
                 <subvertex xmi:type="uml:State" xmi:id="_4UfoIFiuEeiQLo5rqCRH8w" name="connecting">
                   <region xmi:type="uml:Region" xmi:id="_k7XjUlmKEeiFFviyqWdp8w" name="Region1">
