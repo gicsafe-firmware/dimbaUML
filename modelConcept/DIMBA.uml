@@ -390,6 +390,8 @@
         </when>
       </packagedElement>
       <packagedElement xmi:type="uml:Signal" xmi:id="__6CbkHs8EeiOIuysW0vLKg" name="evSigLevel"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_4mFScIXUEeirvZHRzeSlwg" name="evOper"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_4xJ6AIXUEeirvZHRzeSlwg" name="evOper" signal="_4mFScIXUEeirvZHRzeSlwg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:StateMachine" xmi:id="_i1rp0FRTEeiBd_DXg33BBQ" name="ConMgr">
       <ownedRule xmi:type="uml:Constraint" xmi:id="_yA2HgFioEeiQLo5rqCRH8w">
@@ -853,7 +855,7 @@
                 </subvertex>
                 <subvertex xmi:type="uml:State" xmi:id="_6a4F0FiuEeiQLo5rqCRH8w" name="configure">
                   <region xmi:type="uml:Region" xmi:id="_v9DPcVmHEeiFFviyqWdp8w" name="Region1">
-                    <transition xmi:type="uml:Transition" xmi:id="_4LIEIFmHEeiFFviyqWdp8w" source="_2j2kUFmHEeiFFviyqWdp8w" target="_v9QDwFmHEeiFFviyqWdp8w">
+                    <transition xmi:type="uml:Transition" xmi:id="_4LIEIFmHEeiFFviyqWdp8w" source="_2j2kUFmHEeiFFviyqWdp8w" target="_iTsOcIXUEeirvZHRzeSlwg">
                       <effect xmi:type="uml:OpaqueBehavior" xmi:id="_VfxD8G6yEeizZc1aGKRLzQ">
                         <language>C</language>
                         <body>configureInit();</body>
@@ -880,6 +882,9 @@
                       <trigger xmi:type="uml:Trigger" xmi:id="_3Wt54HovEei4PsOC5dvXOg" event="_R8vWIFmKEeiFFviyqWdp8w"/>
                       <trigger xmi:type="uml:Trigger" xmi:id="__Po98HovEei4PsOC5dvXOg" event="__GkhgHovEei4PsOC5dvXOg"/>
                     </transition>
+                    <transition xmi:type="uml:Transition" xmi:id="_zZX9AIXUEeirvZHRzeSlwg" source="_iTsOcIXUEeirvZHRzeSlwg" target="_v9QDwFmHEeiFFviyqWdp8w">
+                      <trigger xmi:type="uml:Trigger" xmi:id="_4_EaMIXUEeirvZHRzeSlwg" name="evOper" event="_4xJ6AIXUEeirvZHRzeSlwg"/>
+                    </transition>
                     <subvertex xmi:type="uml:State" xmi:id="_v9QDwFmHEeiFFviyqWdp8w" name="setAPN">
                       <entry xmi:type="uml:OpaqueBehavior" xmi:id="_CQ1v4FmIEeiFFviyqWdp8w">
                         <language>C</language>
@@ -901,6 +906,12 @@
                     </subvertex>
                     <subvertex xmi:type="uml:FinalState" xmi:id="_r6Qy8FqZEeiA69UjQR0RyA" name=""/>
                     <subvertex xmi:type="uml:Pseudostate" xmi:id="_tA8H4GTxEeiNN_MZ6epyJg" name="" kind="shallowHistory"/>
+                    <subvertex xmi:type="uml:State" xmi:id="_iTsOcIXUEeirvZHRzeSlwg" name="getOper">
+                      <entry xmi:type="uml:OpaqueBehavior" xmi:id="_vMgT8IXUEeirvZHRzeSlwg">
+                        <language>C</language>
+                        <body>getOper();</body>
+                      </entry>
+                    </subvertex>
                   </region>
                 </subvertex>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_BJx0gFi0EeiQLo5rqCRH8w"/>
