@@ -651,6 +651,7 @@
                   <trigger xmi:type="uml:Trigger" xmi:id="_SafzsFmLEeiFFviyqWdp8w" name="evNoResponse" event="_9rJ44FiwEeiQLo5rqCRH8w"/>
                   <trigger xmi:type="uml:Trigger" xmi:id="_JF3NMG6gEei7quLLBC1gQg" name="evClosed" event="_W1lmUGW9EeivSvTH1LqtnQ"/>
                   <trigger xmi:type="uml:Trigger" xmi:id="_RV2hoH3vEeihPLcquCoF6w" event="_DXAPYFz5EeildqcvJZY8yg"/>
+                  <trigger xmi:type="uml:Trigger" xmi:id="_BQNxMIhrEeieWrqseTRUEQ" event="_H0brYFl0EeioMqgkRul4rQ"/>
                 </transition>
                 <transition xmi:type="uml:Transition" xmi:id="_Rs2LQGYHEeiSsKUmuCYmrw" guard="_OhpTMGYKEeiSsKUmuCYmrw" source="_ltE00GYGEeiSsKUmuCYmrw" target="_LcAXkFmLEeiFFviyqWdp8w">
                   <ownedRule xmi:type="uml:Constraint" xmi:id="_OhpTMGYKEeiSsKUmuCYmrw">
@@ -723,6 +724,10 @@
                       <trigger xmi:type="uml:Trigger" xmi:id="_TqfW8GX3EeiSsKUmuCYmrw" event="_IwVd4GX0EeiSsKUmuCYmrw"/>
                     </transition>
                     <transition xmi:type="uml:Transition" xmi:id="_VytiQHowEei4PsOC5dvXOg" source="__45gwFmKEeiFFviyqWdp8w" target="_OxN1cHowEei4PsOC5dvXOg">
+                      <effect xmi:type="uml:OpaqueBehavior" xmi:id="_lGq3IIhrEeieWrqseTRUEQ">
+                        <language>C</language>
+                        <body>socketClose()</body>
+                      </effect>
                       <trigger xmi:type="uml:Trigger" xmi:id="_bJ9TwHowEei4PsOC5dvXOg" name="evRestart" event="_Y9bKwHowEei4PsOC5dvXOg"/>
                     </transition>
                     <transition xmi:type="uml:Transition" xmi:id="_eytjIHowEei4PsOC5dvXOg" source="_OxN1cHowEei4PsOC5dvXOg" target="_PZad4HowEei4PsOC5dvXOg">
@@ -779,6 +784,7 @@
                             <body>sendFail();</body>
                           </effect>
                           <trigger xmi:type="uml:Trigger" xmi:id="_qfpiMG45Eeip65OxVagWOA" event="_9rJ44FiwEeiQLo5rqCRH8w"/>
+                          <trigger xmi:type="uml:Trigger" xmi:id="_HCR2cIhrEeieWrqseTRUEQ" event="_H0brYFl0EeioMqgkRul4rQ"/>
                         </transition>
                         <transition xmi:type="uml:Transition" xmi:id="_vYLXYG45Eeip65OxVagWOA" source="_MW--wGQjEeietdcvou649g" target="_HzjP0mQjEeietdcvou649g">
                           <effect xmi:type="uml:OpaqueBehavior" xmi:id="_zsFckG45Eeip65OxVagWOA">
@@ -786,6 +792,7 @@
                             <body>recvFail();</body>
                           </effect>
                           <trigger xmi:type="uml:Trigger" xmi:id="_w9S7EG45Eeip65OxVagWOA" event="_9rJ44FiwEeiQLo5rqCRH8w"/>
+                          <trigger xmi:type="uml:Trigger" xmi:id="_EvulAIhrEeieWrqseTRUEQ" event="_H0brYFl0EeioMqgkRul4rQ"/>
                         </transition>
                         <transition xmi:type="uml:Transition" xmi:id="_c6bg0HlJEei2TLacF0kaRA" kind="internal" source="_HzjP0mQjEeietdcvou649g" target="_HzjP0mQjEeietdcvou649g">
                           <effect xmi:type="uml:OpaqueBehavior" xmi:id="_r4ajEHlJEei2TLacF0kaRA">
