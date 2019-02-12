@@ -45,7 +45,7 @@
     <packagedElement xmi:type="uml:Realization" xmi:id="_hHnjQFd5Eeia3PgQtXbrog" client="_QQ4PoFd5Eeia3PgQtXbrog" supplier="_flHrMFd4Eeia3PgQtXbrog"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_hzvpcFd5Eeia3PgQtXbrog" client="_Rf1_gFLLEei-ps2IrsePSA" supplier="_Rf1_gFLLEei-ps2IrsePSA"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_3vknkFd5Eeia3PgQtXbrog" name="IOChangerDetector" isActive="true"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_6uZJIFd5Eeia3PgQtXbrog" name="AnSampler" isActive="true"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6uZJIFd5Eeia3PgQtXbrog" name="AnSamplerIsr" isActive="true"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_99vaAFd5Eeia3PgQtXbrog" visibility="public" memberEnd="_99vaA1d5Eeia3PgQtXbrog _99vaBld5Eeia3PgQtXbrog" navigableOwnedEnd="_99vaA1d5Eeia3PgQtXbrog">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_99vaAVd5Eeia3PgQtXbrog" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_99vaAld5Eeia3PgQtXbrog" key="nature" value="UML_Nature"/>
@@ -68,6 +68,202 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_GhojIF7MEeiYcaQ4qYJ6pg" name="SSP"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_nUzsAF7REeiYcaQ4qYJ6pg" name="Packet"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZoOGIC7YEemz1-1VM5erZg" name="AnSampler">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_CWMUoC7ZEemz1-1VM5erZg" name="Init">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KxBL4C7ZEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MQurIC7ZEemz1-1VM5erZg" name="Put">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_O4ia4C7ZEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_QRJzoC7ZEemz1-1VM5erZg" name="GetSet">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VlvSsC7ZEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gEKZYC7ZEemz1-1VM5erZg" name="nSamples">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_n12NAC7ZEemz1-1VM5erZg" name="GetNumSamples">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qsaxgC7ZEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_fwDnEC7YEemz1-1VM5erZg" name="AnSamplerBuffer"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iVCFQC7YEemz1-1VM5erZg" name="Epoch">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_37EusC7aEemz1-1VM5erZg" name="Init">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8Yc48C7aEemz1-1VM5erZg" type="_iVCFQC7YEemz1-1VM5erZg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_-B6xIC7aEemz1-1VM5erZg" name="Get">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AQ_30C7bEemz1-1VM5erZg" type="_iVCFQC7YEemz1-1VM5erZg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_BTzYoC7bEemz1-1VM5erZg" name="updateNow"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_EpbQoC7bEemz1-1VM5erZg" name="Mktime">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NUotQC7bEemz1-1VM5erZg" name="stime" type="_NDcPkC7bEemz1-1VM5erZg"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PZmOoC7bEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#ELong"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_mpztIC7YEemz1-1VM5erZg" name="CirBuffer">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hAWYAC7dEemz1-1VM5erZg" name="Init">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_m-ApQC7dEemz1-1VM5erZg" name="sto" direction="out">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qiSoUC7dEemz1-1VM5erZg" name="elemSize">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_tKxtgC7dEemz1-1VM5erZg" name="nElem">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ss8d0C7kEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__cjNAC7jEemz1-1VM5erZg" name="Put">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_h99yoC7kEemz1-1VM5erZg" name="elem">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qpOSkC7kEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_k7WJwC7kEemz1-1VM5erZg" name="Get">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nFqsQC7kEemz1-1VM5erZg" name="elem" direction="out">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_v6mFkC7kEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_wu4CMC7kEemz1-1VM5erZg" name="GetBlock">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7Wm14C7kEemz1-1VM5erZg" name="destBlock" direction="out">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AP0AgC7lEemz1-1VM5erZg" name="nElem">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_B1ngsC7lEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_C_suMC7lEemz1-1VM5erZg" name="GetNumElem">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Iw6e4C7lEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vgMfAC7YEemz1-1VM5erZg" memberEnd="_vgWQAC7YEemz1-1VM5erZg _vgXeIC7YEemz1-1VM5erZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vgTzwC7YEemz1-1VM5erZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vgUa0C7YEemz1-1VM5erZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_vgXeIC7YEemz1-1VM5erZg" name="ansampler" type="_ZoOGIC7YEemz1-1VM5erZg" association="_vgMfAC7YEemz1-1VM5erZg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_vgWQAC7YEemz1-1VM5erZg" name="anSignals" type="_fwDnEC7YEemz1-1VM5erZg" aggregation="composite" association="_vgMfAC7YEemz1-1VM5erZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vgW3EC7YEemz1-1VM5erZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralString" xmi:id="_Mdb08C7aEemz1-1VM5erZg" value="NUM_AN_SIGNALS"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_waNQMC7YEemz1-1VM5erZg" memberEnd="_waN3Qi7YEemz1-1VM5erZg _waPFYC7YEemz1-1VM5erZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_waN3QC7YEemz1-1VM5erZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_waN3QS7YEemz1-1VM5erZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_waPFYC7YEemz1-1VM5erZg" name="ansampler" type="_ZoOGIC7YEemz1-1VM5erZg" association="_waNQMC7YEemz1-1VM5erZg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_waN3Qi7YEemz1-1VM5erZg" name="timeStamp" type="_iVCFQC7YEemz1-1VM5erZg" aggregation="composite" association="_waNQMC7YEemz1-1VM5erZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_waOeUC7YEemz1-1VM5erZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_waOeUS7YEemz1-1VM5erZg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xH0kIC7YEemz1-1VM5erZg" memberEnd="_xH1yQi7YEemz1-1VM5erZg _xH3AYC7YEemz1-1VM5erZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xH1yQC7YEemz1-1VM5erZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xH1yQS7YEemz1-1VM5erZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xH3AYC7YEemz1-1VM5erZg" name="ansamplerbuffer" type="_fwDnEC7YEemz1-1VM5erZg" association="_xH0kIC7YEemz1-1VM5erZg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xH1yQi7YEemz1-1VM5erZg" name="samples" type="_ZZBsMC7bEemz1-1VM5erZg" aggregation="composite" association="_xH0kIC7YEemz1-1VM5erZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xH2ZUC7YEemz1-1VM5erZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralString" xmi:id="_SovgoC7aEemz1-1VM5erZg" value="MAX_AN_NUM_SAMPLES"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xsSjIC7YEemz1-1VM5erZg" memberEnd="_xsUYUC7YEemz1-1VM5erZg _xsU_YS7YEemz1-1VM5erZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xsTxQC7YEemz1-1VM5erZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xsTxQS7YEemz1-1VM5erZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xsU_YS7YEemz1-1VM5erZg" name="ansamplerbuffer" type="_fwDnEC7YEemz1-1VM5erZg" association="_xsSjIC7YEemz1-1VM5erZg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xsUYUC7YEemz1-1VM5erZg" name="buffer" type="_mpztIC7YEemz1-1VM5erZg" aggregation="composite" association="_xsSjIC7YEemz1-1VM5erZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xsUYUS7YEemz1-1VM5erZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xsU_YC7YEemz1-1VM5erZg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_NDcPkC7bEemz1-1VM5erZg" name="Time"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_ZZBsMC7bEemz1-1VM5erZg" name="SampleValue"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lIkcgC7bEemz1-1VM5erZg" name="IoChgDet">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_uCPy8C7bEemz1-1VM5erZg" name="Init">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xbzvwC7bEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_y030cC7bEemz1-1VM5erZg" name="Put">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2X-HwC7bEemz1-1VM5erZg" name="signalId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5zCgcC7bEemz1-1VM5erZg" name="signalValue">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9ixhkC7bEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Av_EcC7cEemz1-1VM5erZg" name="Get">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_C53iEC7cEemz1-1VM5erZg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Hvq98C7dEemz1-1VM5erZg" name="destBlock" type="_GdMe4C7cEemz1-1VM5erZg" direction="out"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KnSEQC7dEemz1-1VM5erZg" name="nChanges">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GdMe4C7cEemz1-1VM5erZg" name="IOChg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1EpCMC7cEemz1-1VM5erZg" name="signalId">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3fOOQC7cEemz1-1VM5erZg" name="signalValue">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_JJshYC7cEemz1-1VM5erZg" memberEnd="_JJuWkC7cEemz1-1VM5erZg _JJvksS7cEemz1-1VM5erZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JJtvgC7cEemz1-1VM5erZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JJtvgS7cEemz1-1VM5erZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_JJvksS7cEemz1-1VM5erZg" name="iochgdet" type="_lIkcgC7bEemz1-1VM5erZg" association="_JJshYC7cEemz1-1VM5erZg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_JJuWkC7cEemz1-1VM5erZg" name="changes" type="_GdMe4C7cEemz1-1VM5erZg" aggregation="composite" association="_JJshYC7cEemz1-1VM5erZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JJu9oC7cEemz1-1VM5erZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralString" xmi:id="_WetasC7cEemz1-1VM5erZg" value="MAX_NUM_IO_CHANGES"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_bpTQQC7cEemz1-1VM5erZg" memberEnd="_bpVFcC7cEemz1-1VM5erZg _bpVsgS7cEemz1-1VM5erZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bpUeYC7cEemz1-1VM5erZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bpUeYS7cEemz1-1VM5erZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_bpVsgS7cEemz1-1VM5erZg" name="iochgdet" type="_lIkcgC7bEemz1-1VM5erZg" association="_bpTQQC7cEemz1-1VM5erZg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_bpVFcC7cEemz1-1VM5erZg" name="buffer" type="_mpztIC7YEemz1-1VM5erZg" aggregation="composite" association="_bpTQQC7cEemz1-1VM5erZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bpVFcS7cEemz1-1VM5erZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bpVsgC7cEemz1-1VM5erZg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_nr3qQC7cEemz1-1VM5erZg" visibility="protected" memberEnd="_nr44Yi7cEemz1-1VM5erZg _nr6GgS7cEemz1-1VM5erZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nr44YC7cEemz1-1VM5erZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nr44YS7cEemz1-1VM5erZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_nr6GgS7cEemz1-1VM5erZg" name="iochg" type="_GdMe4C7cEemz1-1VM5erZg" association="_nr3qQC7cEemz1-1VM5erZg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_nr44Yi7cEemz1-1VM5erZg" name="epoch" type="_iVCFQC7YEemz1-1VM5erZg" aggregation="composite" association="_nr3qQC7cEemz1-1VM5erZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nr5fcC7cEemz1-1VM5erZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nr6GgC7cEemz1-1VM5erZg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_Tkn6sFLLEei-ps2IrsePSA" name="Behavior">
     <packagedElement xmi:type="uml:StateMachine" xmi:id="_Hs4wUFLOEei-ps2IrsePSA" name="ModMgr">
